@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "00a4c935-44bc-425a-8cfc-8c4bf33523eb",
+		"_postman_id": "76c2d4e7-609f-45b5-9d59-bba220b4efa9",
 		"name": "Willys",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26968382",
-		"_collection_link": "https://www.postman.com/aviation-engineer-97338859/workspace/my-workspace/collection/26968382-00a4c935-44bc-425a-8cfc-8c4bf33523eb?action=share&source=collection_link&creator=26968382"
+		"_collection_link": "https://albinkyh.postman.co/workspace/Mataff%25C3%25A4ren~c4bf656d-eac4-4c57-bd1a-844ecb13851c/collection/26669808-76c2d4e7-609f-45b5-9d59-bba220b4efa9?action=share&source=collection_link&creator=26968382"
 	},
 	"item": [
 		{
@@ -193,14 +193,9 @@
 							"\r",
 							"pm.test('First product of each main category should start with either A, B, +, T, 2, 8, 1 or 4', () => {\r",
 							"        let firstProduct = responseData.results[0].name;\r",
-							"        //if (typeof firstProduct === 'string' && /^[AB+T2814]/.test(firstProduct[0])) {\r",
-							"            console.log(firstProduct);\r",
 							"            pm.expect(firstProduct).to.satisfy((productName) => {\r",
 							"                return /^[AB+T2814]/.test(productName[0]);\r",
-							"            });  \r",
-							"        //} else {\r",
-							"            //console.log(`This product does not start with an A, B, +, T, 2, 8, 1 or 4, the product is ${firstProduct}`);\r",
-							"        //}\r",
+							"        });  \r",
 							"});\r",
 							"\r",
 							"// Repeat/loop this request until we have requested all main categories\r",
