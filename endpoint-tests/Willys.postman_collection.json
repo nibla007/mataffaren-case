@@ -112,8 +112,12 @@
 							"// Repeat/loop this request until we have requested all main categories\r",
 							"\r",
 							"if(categories.children[categoryCounter]){\r",
+							"    console.log(categoryCounter);\r",
 							"    postman.setNextRequest('Get productlist within categories')\r",
+							"} else {\r",
+							"    pm.environment.set('categoryCounter', 0)\r",
 							"}\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
@@ -123,16 +127,12 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"// Unpack from JSON all the categories\r",
 							"let categories = JSON.parse(pm.environment.get('categoryData'));\r",
-							"// Get the category counter and convert to number (using +)\r",
 							"let categoryCounter = +pm.environment.get('categoryCounter');\r",
-							"\r",
+							"console.log(categories.children.length, categoryCounter);\r",
+							"console.log(categories.children[categoryCounter])\r",
 							"let urlCategoryPart = categories.children[categoryCounter].url;\r",
-							"\r",
 							"pm.environment.set('urlCategoryPart', urlCategoryPart);\r",
-							"\r",
-							"// Add 1 to the categoryCounter environment variable\r",
 							"pm.environment.set('categoryCounter', categoryCounter + 1);"
 						],
 						"type": "text/javascript"
@@ -195,19 +195,15 @@
 							"});\r",
 							"\r",
 							"pm.test('First product of each main category should start with either A, B, +, T, 2, 8, 1 or 4', () => {\r",
-							"    for (category of responseData.results) {\r",
-							"        let firstProduct = category.name;\r",
-							"        if (typeof firstProduct === 'string' && /^[AB+T2814]/.test(firstProduct[0])) {\r",
-							"            // console.log(firstProduct);\r",
+							"        let firstProduct = responseData.results[0].name;\r",
+							"        //if (typeof firstProduct === 'string' && /^[AB+T2814]/.test(firstProduct[0])) {\r",
+							"            console.log(firstProduct);\r",
 							"            pm.expect(firstProduct).to.satisfy((productName) => {\r",
 							"                return /^[AB+T2814]/.test(productName[0]);\r",
-							"            });\r",
-							"            break;\r",
-							"        } else {\r",
-							"            console.log(`This product does not start with an A, B, +, T, 2, 8, 1 or 4, the product is ${firstProduct}`);\r",
-							"            break;\r",
-							"        }\r",
-							"    }\r",
+							"            });  \r",
+							"        //} else {\r",
+							"            //console.log(`This product does not start with an A, B, +, T, 2, 8, 1 or 4, the product is ${firstProduct}`);\r",
+							"        //}\r",
 							"});\r",
 							"\r",
 							"// Repeat/loop this request until we have requested all main categories\r",
@@ -224,17 +220,12 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"// Unpack from JSON all the categories\r",
 							"let categories = JSON.parse(pm.environment.get('categoryData'));\r",
-							"// Get the category counter and convert to number (using +)\r",
 							"let categoryCounter = +pm.environment.get('categoryCounter');\r",
-							"\r",
+							"console.log(categoryCounter);\r",
 							"let urlCategoryPart = categories.children[categoryCounter].url;\r",
 							"pm.environment.set('urlCategoryPart', urlCategoryPart);\r",
-							"\r",
-							"// Add 1 to the categoryCounter environment variable\r",
-							"pm.environment.set('categoryCounter', categoryCounter + 1);\r",
-							""
+							"pm.environment.set('categoryCounter', categoryCounter + 1);"
 						],
 						"type": "text/javascript"
 					}
@@ -270,6 +261,26 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
