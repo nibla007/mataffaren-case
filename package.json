@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "concurrently \"npm:backend\" \"npm:dev\"",
-    "backend": "NODE_NO_WARNINGS=1 node --watch backend/index.cjs",
+    "backend": "node --watch backend/index.cjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
