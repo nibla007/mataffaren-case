@@ -112,7 +112,6 @@
 							"// Repeat/loop this request until we have requested all main categories\r",
 							"\r",
 							"if(categories.children[categoryCounter]){\r",
-							"    console.log(categoryCounter);\r",
 							"    postman.setNextRequest('Get productlist within categories')\r",
 							"} else {\r",
 							"    pm.environment.set('categoryCounter', 0)\r",
@@ -129,8 +128,6 @@
 						"exec": [
 							"let categories = JSON.parse(pm.environment.get('categoryData'));\r",
 							"let categoryCounter = +pm.environment.get('categoryCounter');\r",
-							"console.log(categories.children.length, categoryCounter);\r",
-							"console.log(categories.children[categoryCounter])\r",
 							"let urlCategoryPart = categories.children[categoryCounter].url;\r",
 							"pm.environment.set('urlCategoryPart', urlCategoryPart);\r",
 							"pm.environment.set('categoryCounter', categoryCounter + 1);"
@@ -222,7 +219,6 @@
 						"exec": [
 							"let categories = JSON.parse(pm.environment.get('categoryData'));\r",
 							"let categoryCounter = +pm.environment.get('categoryCounter');\r",
-							"console.log(categoryCounter);\r",
 							"let urlCategoryPart = categories.children[categoryCounter].url;\r",
 							"pm.environment.set('urlCategoryPart', urlCategoryPart);\r",
 							"pm.environment.set('categoryCounter', categoryCounter + 1);"
