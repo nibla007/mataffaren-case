@@ -31,7 +31,9 @@ TODO - Tester för ?
 TODO - Sno thomas kod för att kunna köra "postman" tester i VSC istället
 ## Common tests
 ### The status code of the response should be 200
+Tests the status of the API we're sending a request to and makes sure that it's working by expecting it to have a status of 200, which is the globally accepted status-code for OK("pm.response.to.have.status(200"))
 ### The response time should be below 1 second
+Tests the response time of the API and makes sure it's below 1000ms("pm.expect(pm.response.responseTime).to.be.below(1000)")
 ## 1 | Get categories
 ### The response time should be below 1 second
 ### Each main category should have the properties title and url and they have the datatype "string"
