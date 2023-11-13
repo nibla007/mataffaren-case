@@ -57,7 +57,7 @@ Tests that the first product's price(a)(index 0) is less than or equal to the se
 
 - Checks if the current product is on a campaign
 - If the current product and the next product are on campaign, continue to the next iteration
-- If the first product's priceValue is less than the second product's price
+- If the first product's priceValue is greater than the second product's priceValue, fail the test
 - If the prices are not in ascending order, fail the test
 
 ## 6 | Test pastej price-desc
@@ -80,6 +80,7 @@ Tests that the first product's price(a)(index 0) is greater than or equal to the
 
 - Checks if the current product is on a campaign
 - If the current product and the next product are on campaign, continue to the next iteration
+- If the first product's priceValue is less than the second product's priceValue, fail the test
 - If the prices are not in descending order, fail the test
 
 ## 7 | Test pastej compareprice-asc
