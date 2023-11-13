@@ -4,7 +4,7 @@
 
 ### The status code of the response should be 200
 
-Tests if the current request has a response with status-code 200, which is the globally accepted status-code for OK("pm.response.to.have.status(200"))
+Tests the status of the API we're sending a request to and makes sure that it's working by expecting it to have a status of 200, which is the globally accepted status-code for OK("pm.response.to.have.status(200"))
 
 ### The response time should be below 1 second
 
