@@ -68,8 +68,5 @@ Tests that the first product from each main category is sorted from A-Z with spe
 ### Product comparePrices should be sorted in descending order
 
 ## 9 | Pagination test
-### Pagination Test
-### test
-
-
-
+### Test if pagination is implemented and working as intended
+Checks if pagination and it's properties exists and tests their values.
