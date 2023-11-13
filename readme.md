@@ -1,9 +1,5 @@
 # Tests
 
-TODO - Tester för alla möjliga sätt att sortera produkterna på
-TODO - Tester för ?
-TODO - Sno thomas kod för att kunna köra "postman" tester i VSC istället
-
 ## Common tests
 
 ### The status code of the response should be 200
@@ -33,16 +29,19 @@ Tests that there's at least one sub category for each main category.
 ## 3 | Test name-asc
 
 ### First product of each main category should start with either A, B, +, T, 2, 8, 1 or 4
+
 Tests that the first product in each main category starts with one of the above letters to make sure that the alphabetical sorting system works. If it fails, it means that they've added a new product that starts with either a symbol, number or that the first product starts with an unexpected letter.
 
 ## 4 | Test name-desc
 
 ### First product of each main category should start with either Ö, Ä, Å, V, T or Z
+
 Tests that the first product in each main category starts with one of the above letters to make sure that the alphabetical sorting system works. If it fails, it means that they've added a new product that takes priority over either Ä, Å, V, T or Z.
 
 ## 5 | Test pastej price-asc
 
 ### Product prices should be sorted in ascending order (version 1)
+
 Tests that the first product's price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Pastej och paté to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 9.9 is less than or equal to b: 11.9 
@@ -65,6 +64,7 @@ Tests that the first product's price(a)(index 0) is less than or equal to the se
 ## 6 | Test pastej price-desc
 
 ### Product prices should be sorted in descending order (version 1)
+
 Tests that the first product's price(a)(index 0) is greater than or equal to the second product's price(a)(index 1), and it compares it this way on all products in the sub category Pastej och paté to ensure that there're no <span style="color:red">anomalies</span>.
 
 ```
@@ -82,6 +82,7 @@ Tests that the first product's price(a)(index 0) is greater than or equal to the
 ## 7 | Test pastej compareprice-asc
 
 ### Product comparePrices should be sorted in ascending order
+
 Tests that the first product's compare price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Pastej och paté to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 24.9 is less than or equal to b: 28.9 
@@ -92,6 +93,7 @@ Tests that the first product's compare price(a)(index 0) is less than or equal t
 ## 8 | Test pastej compareprice-desc
 
 ### Product comparePrices should be sorted in descending order
+
 Tests that the second product's compare price(b) is less than or equal to the first product's price(a) and loops through the whole product list of the sub category Pastej och paté in this way to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 229 is greater than or equal to b: 238 -> Test fails here because 229 is not greater than or equal to 238
