@@ -42,7 +42,7 @@ Tests that the first product in each main category starts with one of the above 
 
 ### Product prices should be sorted in ascending order (version 1)
 
-Tests that the first product's price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Pastej och paté to ensure that there're no <span style="color:red">anomalies</span>.
+Tests that the first product's price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Pastej och paté to ensure that there are no <span style="color:red">anomalies</span>.
 ```
 0, a: 9.9 is less than or equal to b: 11.9 
  
@@ -57,15 +57,14 @@ Tests that the first product's price(a)(index 0) is less than or equal to the se
 
 - Checks if the current product is on a campaign
 - If the current product and the next product are on campaign, continue to the next iteration
-- If the next product is on campaign but the current one is not, fail the test
+- If the first product's priceValue is less than the second product's price
 - If the prices are not in ascending order, fail the test
-- Asserts that the prices are sorted in ascending order
 
 ## 6 | Test pastej price-desc
 
 ### Product prices should be sorted in descending order (version 1)
 
-Tests that the first product's price(a)(index 0) is greater than or equal to the second product's price(a)(index 1), and it compares it this way on all products in the sub category Pastej och paté to ensure that there're no <span style="color:red">anomalies</span>.
+Tests that the first product's price(a)(index 0) is greater than or equal to the second product's price(a)(index 1), and it compares it this way on all products in the sub category Pastej och paté to ensure that there are no <span style="color:red">anomalies</span>.
 
 ```
 11, a: 14.5 is greater than or equal to b: 14.5 
@@ -78,6 +77,10 @@ Tests that the first product's price(a)(index 0) is greater than or equal to the
 ```
 
 ### Product prices should be sorted in descending order (version 2)
+
+- Checks if the current product is on a campaign
+- If the current product and the next product are on campaign, continue to the next iteration
+- If the prices are not in descending order, fail the test
 
 ## 7 | Test pastej compareprice-asc
 
