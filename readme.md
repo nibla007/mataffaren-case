@@ -86,7 +86,7 @@ Tests that the first product's price(a)(index 0) is greater than or equal to the
 
 ### Product comparePrices should be sorted in ascending order
 
-Tests that the first product's compare price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Pastej och paté to ensure that there're no <span style="color:red">anomalies</span>.
+Tests that the first product's compare price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Frukt to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 24.9 is less than or equal to b: 28.9 
  
@@ -97,13 +97,13 @@ Tests that the first product's compare price(a)(index 0) is less than or equal t
 
 ### Product comparePrices should be sorted in descending order
 
-Tests that the second product's compare price(b) is less than or equal to the first product's price(a) and loops through the whole product list of the sub category Pastej och paté in this way to ensure that there're no <span style="color:red">anomalies</span>.
+Tests that the second product's compare price(b) is less than or equal to the first product's price(a) and loops through the whole product list of the sub category Frukt in this way to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 229 is greater than or equal to b: 238 -> Test fails here because 229 is not greater than or equal to 238
 ```
 
 ## 9 | Pagination test
 
-### Test if pagination is implemented and working as intended
+### Pagination is implemented and working
 
 Checks if pagination and it's properties exists and tests their values.
