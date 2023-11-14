@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "0458f01f-5d18-4a19-ab8b-75de1d610a8c",
-		"name": "Willys Github Green",
+		"name": "Willys-Github-Green",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26968382",
 		"_collection_link": "https://albinkyh.postman.co/workspace/Mataff%C3%A4ren~c4bf656d-eac4-4c57-bd1a-844ecb13851c/collection/26968382-0458f01f-5d18-4a19-ab8b-75de1d610a8c?action=share&source=collection_link&creator=26968382"
@@ -78,7 +78,7 @@
 					"script": {
 						"exec": [
 							"// Set the domain\r",
-							"pm.environment.set('domain', 'http://localhost:4000')"
+							"pm.environment.set('domain', 'http://localhost:5173')"
 						],
 						"type": "text/javascript"
 					}

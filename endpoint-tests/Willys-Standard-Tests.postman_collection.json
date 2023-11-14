@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "76c2d4e7-609f-45b5-9d59-bba220b4efa9",
-		"name": "Willys Standard Tests",
+		"name": "Willys-Standard-Tests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26968382",
 		"_collection_link": "https://albinkyh.postman.co/workspace/Mataff%C3%A4ren~c4bf656d-eac4-4c57-bd1a-844ecb13851c/collection/26669808-76c2d4e7-609f-45b5-9d59-bba220b4efa9?action=share&source=collection_link&creator=26968382"
@@ -78,7 +78,7 @@
 					"script": {
 						"exec": [
 							"// Set the domain\r",
-							"pm.environment.set('domain', 'http://localhost:4000')"
+							"pm.environment.set('domain', 'http://localhost:5173')"
 						],
 						"type": "text/javascript"
 					}
