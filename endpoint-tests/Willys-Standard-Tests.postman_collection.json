@@ -78,7 +78,7 @@
 					"script": {
 						"exec": [
 							"// Set the domain\r",
-							"pm.environment.set('domain', 'http://localhost:5173')"
+							"pm.environment.set('domain', 'http://localhost:4000')"
 						],
 						"type": "text/javascript"
 					}
@@ -463,12 +463,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5173/api/c/kott-chark-och-fagel/palagg/pastej-och-pat-?size=30&page=0&sort=price-asc",
-					"protocol": "http",
+					"raw": "{{domain}}/api/c/kott-chark-och-fagel/palagg/pastej-och-pat-?size=30&page=0&sort=price-asc",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "5173",
 					"path": [
 						"api",
 						"c",
@@ -581,12 +579,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5173/api/c/kott-chark-och-fagel/palagg/pastej-och-pat-?size=30&page=0&sort=price-desc",
-					"protocol": "http",
+					"raw": "{{domain}}/api/c/kott-chark-och-fagel/palagg/pastej-och-pat-?size=30&page=0&sort=price-desc",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "5173",
 					"path": [
 						"api",
 						"c",
@@ -664,12 +660,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5173/api/c/frukt-och-gront/frukt?size=30&page=0&sort=compareprice-asc",
-					"protocol": "http",
+					"raw": "{{domain}}/api/c/frukt-och-gront/frukt?size=30&page=0&sort=compareprice-asc",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "5173",
 					"path": [
 						"api",
 						"c",
@@ -744,12 +738,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5173/api/c/frukt-och-gront/frukt?size=30&page=0&sort=compareprice-desc",
-					"protocol": "http",
+					"raw": "{{domain}}/api/c/frukt-och-gront/frukt?size=30&page=0&sort=compareprice-desc",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "5173",
 					"path": [
 						"api",
 						"c",
@@ -873,12 +865,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5173/api/c/kott-chark-och-fagel/kott?size=30&page=0&sort=topRated",
-					"protocol": "http",
+					"raw": "{{domain}}/api/c/kott-chark-och-fagel/kott?size=30&page=0&sort=topRated",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "5173",
 					"path": [
 						"api",
 						"c",
