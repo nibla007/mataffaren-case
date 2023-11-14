@@ -8,7 +8,7 @@ We added this collection to make sure that Github actions passes and is working 
 
 # Willys Standard Tests
 
-This is the main collection for all tests. This is the one we used when we wrote the tests in the readme.
+This is the main collection for all tests that we explain below in the readme.
 
 # Tests
 
@@ -62,11 +62,11 @@ Tests that the first product in each main category starts with one of the above 
 
 Tests that the first product in each main category starts with one of the above letters to make sure that the alphabetical sorting system works. If it fails, it means that they've added a new product that takes priority over either Ä, Å, V, T or Z.
 
-## 5 | Test pastej price-asc
+## 5 | Test price-asc
 
 ### Product prices should be sorted in ascending order (version 1)
 
-Tests that the first product's price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Pastej och paté to ensure that there are no <span style="color:red">anomalies</span>.
+Tests that the first product's price(a) is less than or equal to the second product's price(b) and it compares it this way on all products in a sub category to ensure that there are no <span style="color:red">anomalies</span>.
 ```
 0, a: 9.9 is less than or equal to b: 11.9 
  
@@ -82,13 +82,13 @@ Tests that the first product's price(a)(index 0) is less than or equal to the se
 - Checks if the current product is on a campaign
 - If the current product and the next product are on campaign, continue to the next iteration
 - If the first product's priceValue is greater than the second product's priceValue, fail the test
-- If the prices are not in ascending order, fail the test
+- If the prices are not sorted in ascending order, fail the test
 
-## 6 | Test pastej price-desc
+## 6 | Test price-desc
 
 ### Product prices should be sorted in descending order (version 1)
 
-Tests that the first product's price(a)(index 0) is greater than or equal to the second product's price(a)(index 1), and it compares it this way on all products in the sub category Pastej och paté to ensure that there are no <span style="color:red">anomalies</span>.
+Tests that the first product's price(a) is greater than or equal to the second product's price(b), and it compares it this way on all products in a sub category to ensure that there are no <span style="color:red">anomalies</span>.
 
 ```
 11, a: 14.5 is greater than or equal to b: 14.5 
@@ -105,24 +105,28 @@ Tests that the first product's price(a)(index 0) is greater than or equal to the
 - Checks if the current product is on a campaign
 - If the current product and the next product are on campaign, continue to the next iteration
 - If the first product's priceValue is less than the second product's priceValue, fail the test
-- If the prices are not in descending order, fail the test
+- If the prices are not sorted in descending order, fail the test
 
-## 7 | Test pastej compareprice-asc
+## 7 | Test compareprice-asc
+
+sort=comparePrice-asc does not visually change to display a products "comparePrice" but still sorts the products by "comparePrice". It always shows the "price" of a product.
 
 ### Product comparePrices should be sorted in ascending order
 
-Tests that the first product's compare price(a)(index 0) is less than or equal to the second product's price(b)(index 1) and it compares it this way on all products in the sub category Frukt to ensure that there're no <span style="color:red">anomalies</span>.
+Tests that the first product's compare price(a) is less than or equal to the second product's price(b) and it compares it this way on all products in a sub category to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 24.9 is less than or equal to b: 28.9 
  
 1, a: 28.9 is less than or equal to b: 16.9  ->  Test fails here because 28.9 is not less than or equal to 16.9
 ```
 
-## 8 | Test pastej compareprice-desc
+## 8 | Test compareprice-desc
+
+sort=comparePrice-desc does not visually change to display a products "comparePrice" but still sorts the products by "comparePrice". It always shows the "price" of a product.
 
 ### Product comparePrices should be sorted in descending order
 
-Tests that the second product's compare price(b) is less than or equal to the first product's price(a) and loops through the whole product list of the sub category Frukt in this way to ensure that there're no <span style="color:red">anomalies</span>.
+Tests that the first product's compare price(a) is greater than or equal to the second product's price(b) and it compares it this way on all products in a sub category to ensure that there're no <span style="color:red">anomalies</span>.
 ```
 0, a: 229 is greater than or equal to b: 238 -> Test fails here because 229 is not greater than or equal to 238
 ```
@@ -131,5 +135,5 @@ Tests that the second product's compare price(b) is less than or equal to the fi
 
 ### Pagination is implemented and working
 
-Checks if pagination and it's properties exists and tests their values.
+Checks if pagination and its properties exists and checks if their values are realistic.
 

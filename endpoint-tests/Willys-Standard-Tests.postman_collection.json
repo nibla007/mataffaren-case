@@ -3,8 +3,8 @@
 		"_postman_id": "76c2d4e7-609f-45b5-9d59-bba220b4efa9",
 		"name": "Willys-Standard-Tests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26968382",
-		"_collection_link": "https://albinkyh.postman.co/workspace/Mataff%C3%A4ren~c4bf656d-eac4-4c57-bd1a-844ecb13851c/collection/26669808-76c2d4e7-609f-45b5-9d59-bba220b4efa9?action=share&source=collection_link&creator=26968382"
+		"_exporter_id": "26669808",
+		"_collection_link": "https://albinkyh.postman.co/workspace/Mataff%25C3%25A4ren~c4bf656d-eac4-4c57-bd1a-844ecb13851c/collection/26669808-76c2d4e7-609f-45b5-9d59-bba220b4efa9?action=share&source=collection_link&creator=26669808"
 	},
 	"item": [
 		{
@@ -372,7 +372,7 @@
 			"response": []
 		},
 		{
-			"name": "Test pastej price-asc",
+			"name": "Test price-asc",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -493,7 +493,7 @@
 			"response": []
 		},
 		{
-			"name": "Test pastej price-desc",
+			"name": "Test price-desc",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -609,7 +609,7 @@
 			"response": []
 		},
 		{
-			"name": "Test pastej compareprice-asc",
+			"name": "Test compareprice-asc",
 			"event": [
 				{
 					"listen": "test",
@@ -689,7 +689,7 @@
 			"response": []
 		},
 		{
-			"name": "Test pastej compareprice-desc",
+			"name": "Test compareprice-desc",
 			"event": [
 				{
 					"listen": "test",
