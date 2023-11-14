@@ -14,4 +14,4 @@ app.get('/api/*', async (req, res) => {
 // Product info:  /api/axfood/rest/p/101290312_ST
 
 // start server
-app.listen(port, () => console.log('Backend listening on port 4000'));
+app.listen(port, () => console.log('Backend listening on port 5173'));
