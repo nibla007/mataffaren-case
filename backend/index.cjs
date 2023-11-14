@@ -1,7 +1,7 @@
 // backend
 const express = require('express');
 const app = express();
-const port = 5173;
+const port = 4000;
 
 // proxy willys
 app.get('/api/*', async (req, res) => {
@@ -14,4 +14,4 @@ app.get('/api/*', async (req, res) => {
 // Product info:  /api/axfood/rest/p/101290312_ST
 
 // start server
-app.listen(port, () => console.log('Backend listening on port 5173'));
+app.listen(port, () => console.log('Backend listening on port 4000'));
