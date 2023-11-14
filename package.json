@@ -9,8 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test-standard": "newman run \"endpoint-tests/Willys Standard Tests.postman_collection.json\"",
-    "test-green": "newman run \"endpoint-tests/Willys Github Green.postman_collection.json\""
+    "test-standard": "newman run \"endpoint-tests/Willys-Standard-Tests.postman_collection.json\"",
+    "test-green": "newman run \"endpoint-tests/Willys-Github-Green.postman_collection.json\""
   },
   "dependencies": {
     "concurrently": "^8.0.1",
