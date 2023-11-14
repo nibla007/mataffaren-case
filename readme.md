@@ -1,18 +1,26 @@
+# Willys GitHub Green
+
+We added this collection to make sure that Github actions passes and is working as intended.
+
+# Willys Standard Tests
+
+This is the main collection for all tests. This is the one we used when we wrote the tests in the readme.
+
 # Tests
 
 ## Common tests
 
 ### The status code of the response should be 200
 
-Tests if the current request had a response with status-code 200, which is the globally accepted status-code for OK("pm.response.to.have.status(200"))
+Tests if the current request had a response with status-code 200, which is the globally accepted status-code for OK("pm.response.to.have.status(200")).
 
 ### The response time should be below 1 second
 
-Tests the response time of the API and makes sure it's below 1000ms("pm.expect(pm.response.responseTime).to.be.below(1000)")
+Tests the response time of the API and makes sure it's below 1000ms("pm.expect(pm.response.responseTime).to.be.below(1000)").
 
 ## 1 | Get categories
 
-### The response time should be below 1 second  Each main category should have the properties title and url and they have the datatype "string"
+### Each main category should have the properties title and url and they have the datatype "string"
 
 Tests that each main category have certain properties(title, url), and that the datatype is "string".
 
@@ -22,9 +30,21 @@ Tests that each main category have certain properties(title, url), and that the 
 
 Tests that there's at least one product in each main category to make sure that it isn't empty.
 
-### There should be at least one sub category in each main category
+### There should be at least one sub category in each main category - length check
 
 Tests that there's at least one sub category for each main category.
+Expects the length of each main category's children array(The sub categories in each main category) to be greater than 0.
+Test fails if it's 0.
+
+### There should be at least one sub category in each main category - not empty check
+
+Tests that there are sub categories in each main category.
+Loops through every main category and checks if it's not empty.
+Fails on "lotter" because it has no sub categories meaning that the array is empty.
+
+### Check if the last main category "lotter" is empty and is length 0
+
+Tests if the last main category has no sub categories by checking if it's length is less than 1 and checking if the sub category is empty.
 
 ## 3 | Test name-asc
 
@@ -108,3 +128,4 @@ Tests that the second product's compare price(b) is less than or equal to the fi
 ### Pagination is implemented and working
 
 Checks if pagination and it's properties exists and tests their values.
+
