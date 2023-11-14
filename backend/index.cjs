@@ -1,7 +1,7 @@
 // backend
 const express = require('express');
 const app = express();
-const port = 4000;
+const port = 5173;
 
 // proxy willys
 app.get('/api/*', async (req, res) => {
