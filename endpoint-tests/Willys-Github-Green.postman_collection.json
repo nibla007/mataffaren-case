@@ -129,7 +129,6 @@
 							"    pm.expect(responseData.results.length).to.be.at.least(1);\r",
 							"});\r",
 							"\r",
-							"// console.log(responseData)\r",
 							"// pm.test('There should be at least one sub category in each main category', () => {\r",
 							"//     pm.expect(responseData.subCategories.length).to.be.at.least(1);\r",
 							"// });\r",
